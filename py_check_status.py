@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import requests
 from requests.exceptions import HTTPError
 
@@ -9,10 +10,8 @@ try:
     in_meeting = jsonResponse["in_meeting"]
 
     if in_meeting:
-    #    print("is in meeting")
        requests.get('http://0.0.0.0:5000/api/busy')
     else:
-    #    print("not in meeting")
        requests.get('http://0.0.0.0:5000/api/available')
 
 
